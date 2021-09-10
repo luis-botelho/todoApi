@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
-function Connection(url,user,password,db) {
+function Connection(url, user, password, db) {
   mongoose
-    .connect( `${url}/${db}`, {
-      user:user,
+    .connect(`${url}/${db}`, {
+      user: user,
       pass: password,
       useNewUrlParser: true,
       useUnifiedTopology: true,
