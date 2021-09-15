@@ -23,8 +23,8 @@ const dbData = process.env.DB_DATA;
 Connection(dbUrl, dbUser, dbPassword, dbData);
 const port = 3050;
 
-app.get("/", (req, res) => {
-  res.send("<h1>Working...</h1>");
+app.get("/", async (req, res) =>  {
+  await res.send("<h1>Working...</h1>");
 });
 
 const taskRoutes = require("./routers/taskRoutes");
