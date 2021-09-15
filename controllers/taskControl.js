@@ -40,12 +40,12 @@ const updateTask = async (req, res) => {
     await tasksModel
       .updateOne({ _id: req.params.id }, req.body)
       .then(() => res.status(200).send("Task updated successfully"))
-      .catch(() => res.status(400).send(`Task not updated something `));
+      .catch(() => res.status(400).send(`Task not updated something wrong`));
   }
 };
 const deleteTask = async (req, res) => {
   await tasksModel
-    .findOneAndDelete({ id: req.params.id }, req.params.id)
+    .deleteOne({_id: req.params.id })
     .then(() => res.status(200).send("Task deleted successfully"))
     .catch((err) => res.status(404).send(`Task not found: ${err.message}`));
 };
