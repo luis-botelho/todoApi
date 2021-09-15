@@ -5,7 +5,7 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const cors = require("cors");
 const corsOptions = {
-  origin: "http://localhost:3000" || "https://reactblue.herokuapp.com/",
+  origin: "http://localhost:3000" || "https://reactblue.herokuapp.com",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
